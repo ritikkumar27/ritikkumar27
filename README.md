@@ -27,6 +27,26 @@
 
 ### 🧠 Core CS
 ![Data Structures & Algorithms](https://img.shields.io/badge/Data_Structures_%26_Algorithms-00599C?style=for-the-badge)
+
+## 📊 Engineering Metrics
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img 
+        src="https://github-readme-stats.vercel.app/api?username=ritikkumar27&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" 
+        width="100%" 
+      />
+    </td>
+    <td width="50%" align="center">
+      <img 
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=ritikkumar27&layout=compact&theme=tokyonight&hide_border=true" 
+        width="100%" 
+      />
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 🚀 Current Focus
