@@ -28,10 +28,27 @@
 ### 🧠 Core CS
 ![Data Structures & Algorithms](https://img.shields.io/badge/Data_Structures_%26_Algorithms-00599C?style=for-the-badge)
 
-
 ---
+
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ritikkumar27&theme=tokyo-night&hide_border=true)
 
 ## 🚀 Current Focus
 - Self-hosting infrastructure
 - Containerization
 - Deployment automation
+
+---
+
+## 🧠 Engineering Approach
+
+- I enjoy understanding how systems work end-to-end.
+- I focus on deployment, networking, and infrastructure.
+- I believe learning happens by building and debugging.
+
+## 🖥 Current Lab Setup
+
+- Ubuntu Home Server 
+- Docker + Docker Compose
+- Caddy as reverse proxy
+- Cloudflare Tunnel (CGNAT bypass)
+- Git-based deployment workflow
