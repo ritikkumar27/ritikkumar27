@@ -4,6 +4,8 @@
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&width=500&lines=DevOps+Journey+in+progress;Learning+by+Deploying+Real+Systems;Linux+%7C+Docker+%7C+Cloudflare;From+Code+to+Production;Final-Year+CS+Student)
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=80&section=footer"/>
+
 ## 🛠 Toolbox
 
 ### 🚀 Infrastructure & DevOps
@@ -28,7 +30,7 @@
 ### 🧠 Core CS
 ![Data Structures & Algorithms](https://img.shields.io/badge/Data_Structures_%26_Algorithms-00599C?style=for-the-badge)
 
----
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=80&section=footer"/>
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ritikkumar27&theme=tokyo-night&hide_border=true)
 
@@ -53,3 +55,5 @@
 
 **Infrastructure**  
  Ubuntu Server • Docker + Compose • Caddy • Cloudflare Tunnel • Git Deployments
+
+ <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=80&section=footer"/>
