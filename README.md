@@ -33,6 +33,7 @@
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ritikkumar27&theme=tokyo-night&hide_border=true)
 
 ## 🚀 Current Focus
+- Reading System Design fundamentals
 - Self-hosting infrastructure
 - Containerization
 - Deployment automation
