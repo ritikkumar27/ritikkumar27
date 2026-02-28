@@ -47,8 +47,15 @@
 
 ## 🖥 Current Lab Setup
 
-- Ubuntu Home Server 
-- Docker + Docker Compose
-- Caddy as reverse proxy
-- Cloudflare Tunnel (CGNAT bypass)
-- Git-based deployment workflow
+### 🧩 Hardware
+![CPU](https://img.shields.io/badge/CPU-Intel_i5_3rd_Gen-0071C5?style=for-the-badge&logo=intel&logoColor=white)
+![RAM](https://img.shields.io/badge/RAM-8GB-009688?style=for-the-badge)
+![SSD](https://img.shields.io/badge/SSD-128GB-4CAF50?style=for-the-badge)
+![HDD](https://img.shields.io/badge/HDD-512GB-795548?style=for-the-badge)
+
+### ⚙ Infrastructure
+![Ubuntu](https://img.shields.io/badge/Ubuntu_Home_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker_%2B_Compose-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy_Reverse_Proxy-1F88C0?style=for-the-badge&logo=caddy&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare_Tunnel_(CGNAT)-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Git](https://img.shields.io/badge/Git_Based_Deployment-F05032?style=for-the-badge&logo=git&logoColor=white)
