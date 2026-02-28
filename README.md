@@ -34,6 +34,15 @@
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ritikkumar27&theme=tokyo-night&hide_border=true)
 
+## 🔥 Commit Streak
+
+<p align="center">
+  <img 
+    src="https://streak-stats.demolab.com?user=ritikkumar27&theme=transparent&ring=9D4EDD&fire=9D4EDD&currStreakLabel=C77DFF&sideLabels=C77DFF&dates=6C757D&hide_border=true" 
+    height="170"
+  />
+</p>
+
 ## 🚀 Current Focus
 - Reading System Design fundamentals
 - Self-hosting infrastructure
