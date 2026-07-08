@@ -1,5 +1,4 @@
 # Hi, I'm Ritik Kumar 👋 
-<img src="https://github.com/ritikkumar27/github-contribution-bomber/blob/main/out.gif?raw=true" width="100%" />
 <!-- ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F700FF&width=435&lines=DevOps+in+progress;Aspiring+DevOps+Engineer;Problem+Solver;Full+Stack+Web+App+Developer) -->
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&width=500&lines=DevOps+Journey+in+progress;Learning+by+Deploying+Real+Systems;Linux+%7C+Docker+%7C+Cloudflare;From+Code+to+Production;Final-Year+CS+Student)
@@ -66,3 +65,6 @@
  Ubuntu Server • Docker + Compose • Caddy • Cloudflare Tunnel • Git Deployments
 
  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=80&section=footer"/>
+
+ <img src="https://github.com/ritikkumar27/github-contribution-bomber/blob/main/out.gif?raw=true" width="100%" />
+
