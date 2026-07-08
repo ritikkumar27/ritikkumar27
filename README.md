@@ -1,4 +1,5 @@
 # Hi, I'm Ritik Kumar 👋 
+https://github.com/ritikkumar27/github-contribution-bomber/blob/main/out.gif?raw=true
 
 <!-- ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F700FF&width=435&lines=DevOps+in+progress;Aspiring+DevOps+Engineer;Problem+Solver;Full+Stack+Web+App+Developer) -->
 
