@@ -66,5 +66,3 @@
 
  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=80&section=footer"/>
 
- <img src="https://github.com/ritikkumar27/github-contribution-bomber/blob/main/out.gif?raw=true" width="100%" />
-
