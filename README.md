@@ -195,18 +195,6 @@ That's also why I keep a homelab — it gives me somewhere to experiment with th
 
 **Current hardware:** Intel i5 3rd gen · 8GB DDR4 RAM · SSD 256GB + HDD 500GB
 
-
-## 🌐 Find Me
-
-<p align="center">
-  <a href="https://ritikkumar.dev"> Portfolio
-  </a>
-  <a href="https://www.linkedin.com/in/ritikkumar27"> LinkedIn
-  </a>
-</p>
-
----
-
 <p align="center">
   <i>Building things. Breaking things. Learning why they broke.</i>
 </p>
