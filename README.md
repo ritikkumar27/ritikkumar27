@@ -41,13 +41,13 @@ I build backends and the infrastructure they run on — not just the code that s
 
 </td>
 <!-- ==================== RIGHT: TYPING ==================== -->
-<td width="48%" valign="top">
+<!-- <td width="48%" valign="top">
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1500&color=00F7FF&center=true&vCenter=true&repeat=true&width=440&height=110&lines=Building+backend+systems...;Learning+distributed+systems...;Running+my+own+infrastructure...;Docker+%7C+Linux+%7C+CI%2FCD;Learning+by+building+and+breaking" alt="Typing animation: Building backend systems; Learning distributed systems; Running my own infrastructure; Docker | Linux | CI/CD; Learning by building and breaking" />
 </p>
 
-</td>
+</td> -->
 </tr>
 </table>
 
