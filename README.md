@@ -225,28 +225,51 @@ BUILD ──▶ DEPLOY ──▶ BREAK ──▶ READ LOGS ──▶ WHY?
 
 ---
 
-<h3 align="center">🛠 Homelab Architecture</h3>
+<h3 align="center">🛠️ Homelab Architecture</h3>
 
 <p align="center">
   <sub>how a request reaches my homelab — with no open inbound ports on my router</sub>
 </p>
 
 ```text
-┌─────────────┐ ─▶ ┌─────────────┐ ─▶ ┌─────────────┐ ─▶ ┌─────────────┐
-│   INTERNET  │ ─▶ │  CLOUDFLARE │ ─▶ │    CADDY    │ ─▶ │   HOMELAB   │
-│    public   │ ─▶ │    tunnel   │ ─▶ │    proxy    │ ─▶ │    Ubuntu   │
-│   DNS req   │ ─▶ │  inbound: 0 │ ─▶ │   TLS term  │ ─▶ │    Docker   │
-                                              ┊
-                                  ┌───────────┘
-                                  ▼
-                       ┌─────────────────────┐
-                       │       SERVICES      │
-                       │     NestJS APIs     │
-                       │     Redis+BullMQ    │
-                       │      PostgreSQL     │
-                       │       workers       │
-                       └─────────────────────┘
+        ┌───────────────┐
+        │ INTERNET      │
+        │ public DNS    │
+        │ client → :443 │
+        └───────────────┘
+        ╎
+        ▼
+        ┌────────────────────┐
+        │ CLOUDFLARE         │
+        │ outbound tunnel    │
+        │ zero inbound ports │
+        └────────────────────┘
+        ╎
+        ▼
+        ┌──────────────────┐
+        │ CADDY            │
+        │ reverse proxy    │
+        │ auto TLS + HTTPS │
+        └──────────────────┘
+        ╎
+        ▼
+┌────────────────────────────────────────────────────────┐
+│          UBUNTU SERVER  ·  DOCKER  ·  HOMELAB          │
+│                                                        │
+│ ┌─────────────┐   ┌────────────────┐   ┌────────────┐  │
+│ │ NestJS APIs │   │ Redis + BullMQ │   │ PostgreSQL │  │
+│ └─────────────┘   └────────────────┘   └────────────┘  │
+│                                                        │
+└────────────────────────────────────────────────────────┘
 ```
+
+**The path, in one line:** a request resolves to Cloudflare → rides an outbound tunnel (so my router opens **zero** inbound ports) → Caddy terminates TLS and proxies by hostname → lands in a container on the Ubuntu box.
+
+**Where the interesting parts live:**
+- **Cloudflare Tunnel** — no port forwarding, no exposed IP; the tunnel is an outbound persistent connection.
+- **Caddy** — automatic TLS + reverse proxy by hostname, so adding a service means one block in a `Caddyfile`, not a port map.
+- **Docker + Compose** — each service in its own network namespace; cross-service traffic only where a port is published.
+- **Tailscale** — a second path in for admin (SSH) that doesn't touch the public route at all.
 
 &nbsp;
 
@@ -257,9 +280,18 @@ BUILD ──▶ DEPLOY ──▶ BREAK ──▶ READ LOGS ──▶ WHY?
 **hardware**
 
 ```text
- Intel i5  (3rd gen)
- 8 GB DDR4
- SSD 256 GB  +  HDD 500 GB
+┌───────────────────────────┐
+│ THE HOMELAB               │
+│ Ubuntu Server · always on │
+└───────────────────────────┘
+     ╎
+     ╎  zero inbound ports on the router
+     ▼
+┌────────────────────────────────┐
+│ CPU    Intel i5 (3rd gen)      │
+│ RAM    8 GB DDR4               │
+│ DISK   SSD 256 GB + HDD 500 GB │
+└────────────────────────────────┘
 ```
 
 </td>
@@ -269,36 +301,15 @@ BUILD ──▶ DEPLOY ──▶ BREAK ──▶ READ LOGS ──▶ WHY?
 
 > An old i5 with 8 GB RAM forces real engineering decisions: what fits in memory, what gets swapped to the HDD, and what a 3rd-gen CPU does to a JIT'd workload at 2am.
 
+That constraint is the point. A fleet of managed services hides the tradeoffs — a 146-mod Minecraft server, a Postgres instance, a NestJS API and a Redis queue fighting over 8 cores teaches you what a **memory budget** actually is, and why **backups and resource limits** aren't optional on stateful workloads.
+
 </td>
 </tr>
 </table>
 
 ---
 
-<h3 align="center">📊 GitHub</h3>
 
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
-<tr>
-<td width="50%" valign="middle" style="padding-right: 14px;">
-  <p align="center"><img src="https://github-readme-stats.vercel.app/api?username=ritikkumar27&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&title_color=00F7FF&icon_color=00F7FF&text_color=8b949e&include_all_commits=true&count_private=true&line_height=28" alt="GitHub stats for ritikkumar27: stars, commits, PRs, issues and contributed repos" /></p>
-</td>
-<td width="50%" valign="middle">
-  <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ritikkumar27&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=00F7FF&text_color=8b949e" alt="Top languages used by ritikkumar27" /></p>
-</td>
-</tr>
-</table>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ritikkumar27&theme=dark&hide_border=true&background=00000000&ring=00F7FF&fire=00F7FF&currStreakLabel=00F7FF&date_format=%5Bj%20M%5D" alt="Current commit streak for ritikkumar27" />
-</p>
-
----
-
-<p align="center">
-  &nbsp;<br>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&pause=2000&color=8b949e&center=true&vCenter=true&width=520&lines=Building+things.+Breaking+things.+Learning+why+they+broke." alt="Motto: Building things. Breaking things. Learning why they broke." />
-  &nbsp;<br>&nbsp;
-</p>
 
 <!--
 <p align="center"><sub>README handcrafted in Vim. Built, broken, and rebuilt — many times.</sub></p>
